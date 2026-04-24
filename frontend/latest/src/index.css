@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: var(--font-body);
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --font-body: 'Manrope', 'Trebuchet MS', sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+
+  --ink-900: #1f2a24;
+  --ink-600: #59655d;
+  --ink-500: #6b766f;
+  --paper: #f6f0e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+p,
+small,
+span {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+strong {
+  color: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
