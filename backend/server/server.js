@@ -1,15 +1,18 @@
 const express = require('express');
-const dotenv = require('dotenv');
 const cors = require('cors');
 const db = require('../config/db');
 const dbPromise = db.promise();
-
-dotenv.config({ quiet: true });
 
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+// Request logging middleware
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.path}`);
+  next();
+});
 
 const STAGE_MAP = {
   planning: 'Planted',
