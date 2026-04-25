@@ -1,4 +1,3 @@
-import mysql from 'mysql2';
 const mysql = require('mysql2');
 const dotenv = require('dotenv');
 const path = require('path');
@@ -7,7 +6,7 @@ const path = require('path');
 dotenv.config({ path: path.resolve(__dirname, '..', '.env') });
 
 const pool = mysql.createPool({
-    host: process.env.DB_HOST || 'localhost',
+    host: process.env.DB_HOST || 'george',
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || 'Georgekama12#',
     database: process.env.DB_NAME,
@@ -21,7 +20,7 @@ console.log('DB Config:', {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD ? 'Georgekama12#' : '***empty***'
+    password: process.env.DB_PASSWORD ? 'Georgekama12#' : 'Not Set',
 });
 
 pool.getConnection((error, connection) => {
