@@ -20,7 +20,7 @@ console.log('DB Config:', {
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     database: process.env.DB_NAME,
-    password: process.env.DB_PASSWORD ? '***set***' : '***empty***'
+    password: process.env.DB_PASSWORD ? 'Georgekama12#' : '***empty***'
 });
 
 pool.getConnection((error, connection) => {
